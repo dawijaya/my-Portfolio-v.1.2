@@ -10,6 +10,8 @@ const config: Config = {
     extend: {
       colors: {
         skyblue: "#87CEEB",
+        primary: "#003366",
+        second: "#D79007",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

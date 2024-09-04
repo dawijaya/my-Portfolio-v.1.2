@@ -98,7 +98,7 @@ export default function Home() {
       setAlert(<Alert severity="success">Terimakasih, Thank you!</Alert>);
 
       setTimeout(() => {
-        router.push("/pilih-bahasa");
+        router.push("/Pilih-Bahasa");
       }, 1000);
     } catch (error) {
       console.error("Error:", error);
