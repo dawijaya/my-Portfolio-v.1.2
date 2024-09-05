@@ -143,7 +143,7 @@ const ProfileCard: React.FC = () => {
             <div className="flex flex-col items-center  space-y-8">
               <Button
                 onPress={onOpenModal1}
-                className="bg-skyblue font-sans hover:bg-primary hover:text-white transition-all text-black py-4 px-7 rounded">
+                className="bg-skyblue font-sans hover:bg-primary hover:text-white transition-all text-black py-4 px-6 rounded">
                 Deskripsi Singkat
               </Button>
 
@@ -154,7 +154,7 @@ const ProfileCard: React.FC = () => {
               </Button>
               <Button
                 onPress={onOpenModal3}
-                className="bg-skyblue hover:bg-primary hover:text-white transition-all text-black py-4 px-10 rounded">
+                className="bg-skyblue hover:bg-primary hover:text-white transition-all text-black py-4 px-9 rounded">
                 Keterampilan
               </Button>
 
@@ -172,11 +172,11 @@ const ProfileCard: React.FC = () => {
                 <ModalContent className="bg-black text-white">
                   {(onClose) => (
                     <>
-                      <ModalHeader className="flex flex-col gap-1 mt-16 text-white bg-black">
+                      <ModalHeader className="flex font-sans font-bold flex-col gap-1 mt-16 text-white bg-black">
                         Deskripsi Singkat
                       </ModalHeader>
 
-                      <ModalBody className="max-h-[500px] gap-y-4 overflow-y-auto">
+                      <ModalBody className="max-h-[500px] p-5 gap-y-4 overflow-y-auto">
                         <p className="text-justify">
                           Saya Lulusan S1 Teknik Informatika Institut Teknologi
                           dan Bisnis Indonesia, salah satu perguruan tinggi
@@ -227,11 +227,11 @@ const ProfileCard: React.FC = () => {
                 <ModalContent className="bg-black text-white">
                   {(onClose) => (
                     <>
-                      <ModalHeader className="flex flex-col gap-1 mt-16 text-white bg-black">
+                      <ModalHeader className="flex font-sans font-semibold flex-col gap-1 mt-16 text-white bg-black">
                         Pengalaman Saya
                       </ModalHeader>
 
-                      <ModalBody className="max-h-[500px] gap-y-4 overflow-y-auto">
+                      <ModalBody className="max-h-[500px] p-5 gap-y-4 overflow-y-auto">
                         <p className="text-justify">
                           Saya telah terjun ke dunia pemrograman selama lebih
                           dari 2 tahun, dengan fokus utama pada pengembangan web
@@ -283,7 +283,7 @@ const ProfileCard: React.FC = () => {
                         Keterampilan :
                       </ModalHeader>
 
-                      <ModalBody className="max-h-[500px] gap-y-4 overflow-y-auto">
+                      <ModalBody className="max-h-[500px] p-5 gap-y-4 overflow-y-auto">
                         <p className="text-justify font-sans font-semibold">
                           Keterampilan Teknis
                         </p>
@@ -292,8 +292,12 @@ const ProfileCard: React.FC = () => {
                           className="bg-white rounded-sm text-black"
                           aria-label="Example static collection table">
                           <TableHeader>
-                            <TableColumn>Bahasa Pemrograman</TableColumn>
-                            <TableColumn>Framework</TableColumn>
+                            <TableColumn className="font-sans font-bold">
+                              Bahasa Pemrograman
+                            </TableColumn>
+                            <TableColumn className="font-sans font-bold">
+                              Framework
+                            </TableColumn>
                           </TableHeader>
                           <TableBody>
                             <TableRow key="1">
@@ -352,8 +356,12 @@ const ProfileCard: React.FC = () => {
                           className="bg-white rounded-sm text-black"
                           aria-label="Example static collection table">
                           <TableHeader>
-                            <TableColumn>Database</TableColumn>
-                            <TableColumn>Komponen</TableColumn>
+                            <TableColumn className="font-sans font-bold">
+                              Database
+                            </TableColumn>
+                            <TableColumn className="font-sans font-bold">
+                              Komponen
+                            </TableColumn>
                           </TableHeader>
                           <TableBody>
                             <TableRow key="1">
@@ -380,8 +388,12 @@ const ProfileCard: React.FC = () => {
                           className="bg-white rounded-sm text-black"
                           aria-label="Example static collection table">
                           <TableHeader>
-                            <TableColumn>Komunikasi</TableColumn>
-                            <TableColumn>Kepemimpinan</TableColumn>
+                            <TableColumn className="font-sans font-bold">
+                              Komunikasi
+                            </TableColumn>
+                            <TableColumn className="font-sans font-bold">
+                              Kepemimpinan
+                            </TableColumn>
                           </TableHeader>
                           <TableBody>
                             <TableRow key="1">
@@ -407,8 +419,12 @@ const ProfileCard: React.FC = () => {
                           className="bg-white rounded-sm text-black"
                           aria-label="Example static collection table">
                           <TableHeader>
-                            <TableColumn>Adaptabilitas</TableColumn>
-                            <TableColumn>Empati dan Pengertian</TableColumn>
+                            <TableColumn className="font-sans font-bold">
+                              Adaptabilitas
+                            </TableColumn>
+                            <TableColumn className="font-sans font-bold">
+                              Empati dan Pengertian
+                            </TableColumn>
                           </TableHeader>
                           <TableBody>
                             <TableRow key="1">
