@@ -38,9 +38,9 @@ const LanguageSelection: React.FC = () => {
             </button>
           </Link>
           <Link href="https://wa.me/6285175232251">
-            <button className="w-[70%] py-2 bg-[#136080] rounded-full flex flex-col items-center font-sans font-medium justify-center mx-auto">
+            <button className="w-[70%] py-2 text-white bg-[#136080] rounded-full flex flex-col items-center font-sans font-medium justify-center mx-auto">
               📞 Pusat bantuan
-              <span className="text-xs font-sans font-bold">
+              <span className="text-xs text-white font-sans font-bold">
                 ( help center )
               </span>
             </button>

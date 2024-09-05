@@ -31,7 +31,11 @@ const Navbar: React.FC = () => {
   const pathname = usePathname();
 
   // Menyembunyikan navbar pada rute tertentu
-  if (pathname === "/" || pathname === "/Pilih-Bahasa") {
+  if (
+    pathname === "/" ||
+    pathname === "/Pilih-Bahasa" ||
+    pathname === "/Indonesia/Deskripsi"
+  ) {
     return null;
   }
 
@@ -50,7 +54,7 @@ const Navbar: React.FC = () => {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography
-        className="font-sans   font-extrabold"
+        className="font-sans  font-extrabold"
         variant="h6"
         sx={{ my: 2 }}>
         Menu
@@ -79,7 +83,7 @@ const Navbar: React.FC = () => {
             </ListItemButton>
           </ListItem>
         ))}
-        <div className="mt-44">
+        <div className="absolute top-[30rem] left-4">
           <p className="font-semibold text-xs">
             Copyright©<span className="text-primary">DandiAgusWijaya</span>2024
           </p>
@@ -102,7 +106,7 @@ const Navbar: React.FC = () => {
             sx={{ mr: 2, display: { sm: "none" } }}>
             <MenuIcon />
           </IconButton>
-          <div className="font-sans font-bold">Menu</div>
+          <div className="font-sans md:hidden font-bold">Menu</div>
           <Typography
             variant="h6"
             component="div"
