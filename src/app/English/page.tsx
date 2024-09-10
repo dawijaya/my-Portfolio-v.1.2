@@ -84,19 +84,19 @@ const imageSlides = [
   {
     src: sertif1.src,
     alt: "Peak Performance",
-    description: "Mega Zoominar 2022 PEAK PERFORMNCE Tanggal: 18-19 Maret 2022",
+    description: "Mega Zoominar 2022 PEAK PERFORMANCE Date: March 18-19, 2022",
   },
   {
     src: sertif2.src,
     alt: "PUBLIC SPEAKING IS LIFESTYLE",
     description:
-      "Webinar Nasional 2023 PUBLIC SPEAKING IS LIFESTYLE Tanggal: 28 Februari 2023",
+      "National Webinar 2023 PUBLIC SPEAKING IS LIFESTYLE Date: February 28, 2023",
   },
   {
     src: sertif3.src, // Menggunakan gambar acak dari Unsplash
     alt: "Start and Developer a career in the Technology industry",
     description:
-      "Webinar Nasional Start and Developer a career in the Technology industry as a back-end Developer Tanggal: 11 Juni 2022",
+      "National Webinar Start and Develop a career in the Technology industry as a back-end Developer Date: 11 June 2022",
   },
   {
     src: sertif4.src, // Menggunakan gambar acak dari Unsplash
@@ -113,13 +113,13 @@ const imageSlides = [
     src: sertif6.src, // Menggunakan gambar acak dari Unsplash
     alt: "Kursus Fundamental JavaScript untuk pembangunan Web",
     description:
-      "Kursus Fundamental JavaScript untuk pembangunan Web 24/12/2023",
+      "JavaScript Fundamentals Course for Web Development 12/24/2023",
   },
   {
     src: sertif7.src, // Menggunakan gambar acak dari Unsplash
     alt: "Seminar Mahasiswa Leadership di Era Digital Menuju Indonesia Emas 2045",
     description:
-      "Seminar Mahasiswa Leadership di Era Digital Menuju Indonesia Emas 2045 21/02/2023",
+      "Student Leadership Seminar in the Digital Era Towards Golden Indonesia 2045 02/21/2023",
   },
   {
     src: sertif8.src, // Menggunakan gambar acak dari Unsplash
@@ -132,26 +132,26 @@ const imageSlides1 = [
     src: lopec1.src,
     alt: "lopec1",
     description:
-      "BackOffice ini dibuat dengan NexjJs App dan TailwindCss. Berisi tentang algoritma penjualan.",
+      "This BackOffice is made with Next Js App and TailwindCss. Contains sales algorithms.",
   },
   {
     src: lopec2.src,
     alt: "lopec2",
     description:
-      "ada data produk, marketing dan data inti lainnya tentang penjualan alat-alat Networking",
+      "there is product data, marketing and other core data about the sale of Networking tools",
   },
 ];
 const imageSlides2 = [
   {
     src: win1.src,
     alt: "win1",
-    description: "Website ini dibuat dengan NextJs app dan TailwindCss",
+    description: "This website is made with NextJs app and TailwindCss",
   },
   {
     src: win2.src,
     alt: "win2",
     description:
-      "Fitur Website ini ada Home, Produk, Tentang Perusahaan, Alamat dan Kontak",
+      "This website features Home, Products, About the Company, Address and Contact",
   },
 ];
 const imageSlides3 = [
@@ -159,13 +159,13 @@ const imageSlides3 = [
     src: motor1.src,
     alt: "motor1",
     description:
-      "Website ini dibuat dengan NextJs app dan TailwindCss, website ini milik klien asal Singapura",
+      "This website is made with NextJs app and TailwindCss, this website belongs to a client from Singapore",
   },
   {
     src: motor2.src,
     alt: "motor2",
     description:
-      "Fitur Website ini ada Home, Produk, Tentang Perusahaan, Alamat dan Kontak",
+      "This website features Home, Products, About the Company, Address and Contact",
   },
 ];
 const imageSlides4 = [
@@ -173,13 +173,13 @@ const imageSlides4 = [
     src: isun1.src,
     alt: "isun1",
     description:
-      "Website ini dibuat dengan Wordpress, website ini milik klien asal Singapura",
+      "This website is made with Wordpress, this website belongs to a client from Singapore",
   },
   {
     src: isun2.src,
     alt: "isun2",
     description:
-      "Fitur Website ini ada Home, Produk, Tentang Perusahaan,penawaran, Alamat dan Kontak",
+      "This website features Home, Products, About the Company, Offers, Address and Contact",
   },
 ];
 const imageSlides5 = [
@@ -187,7 +187,7 @@ const imageSlides5 = [
     src: figma.src,
     alt: "figma",
     description:
-      "Ini adalah Ui/Ux Design Web ini yang saya rancang agar seminimalis mungkin dan hanya 4 pemilihan Warna yang soft",
+      "This is the Ui/Ux Design of this Web which I designed to be as minimal as possible and only have 4 soft color choices",
   },
 ];
 
@@ -241,8 +241,8 @@ const ProfileCard: React.FC = () => {
             />
           </div>
           <p className="text-center font-sans font-semibold mt-4 text-lg">
-            Mendesain dan Mengembangkan Web untuk
-            <span className="text-skyblue"> Masa Depan.</span>
+            Designing and Developing Web for
+            <span className="text-skyblue"> Future.</span>
           </p>
           <div className="absolute top-[24rem]">
             <img
@@ -274,30 +274,30 @@ const ProfileCard: React.FC = () => {
           <img src={Tentanggif.src} alt="gif" className="w-full h-full" />
         </div>
         <h1 className="text-3xl absolute font-sans text-white dark:text-second top-24 font-bold ">
-          Tentang Saya
+          About Me
         </h1>
         <div className="relative flex flex-col items-center text-white  rounded-lg shadow-lg w-80 mx-auto">
           <div className="text-center mt-14 ">
             <h2 className="text-xl font-sans mb-6 font-bold dark:text-white text-second">
-              Silahkan Pilih :
+              Please Select :
             </h2>
 
             <div className="flex flex-col items-center  space-y-8">
               <Button
                 onPress={onOpenModal1}
                 className="bg-skyblue font-sans hover:bg-primary hover:text-white transition-all text-black py-4 px-6 rounded">
-                Deskripsi Singkat
+                Short Description
               </Button>
 
               <Button
                 onPress={onOpenModal2}
                 className="bg-skyblue hover:bg-primary hover:text-white transition-all text-black py-4 px-5 rounded">
-                Pengalaman Kerja
+                Work experience
               </Button>
               <Button
                 onPress={onOpenModal3}
                 className="bg-skyblue hover:bg-primary hover:text-white transition-all text-black py-4 px-9 rounded">
-                Keterampilan
+                Skills
               </Button>
 
               <RadioGroup
@@ -315,36 +315,34 @@ const ProfileCard: React.FC = () => {
                   {(onClose) => (
                     <>
                       <ModalHeader className="flex font-sans font-bold flex-col gap-1 mt-16 text-white bg-black">
-                        Deskripsi Singkat
+                        Short Description
                       </ModalHeader>
 
                       <ModalBody className="max-h-[500px] p-5 gap-y-4 overflow-y-auto">
                         <p className="text-justify">
-                          Saya Lulusan S1 Teknik Informatika Institut Teknologi
-                          dan Bisnis Indonesia, salah satu perguruan tinggi
-                          swasta di Kota Medan, Sumatera Utara, Indonesia
+                          I am a graduate of Informatics Engineering from the
+                          Indonesian Institute of Technology and Business, one
+                          of the private universities in Medan City, North
+                          Sumatra, Indonesia.
                         </p>
                         <p className="text-justify">
-                          Saya memiliki kemampuan berbahasa Inggris dan Jepang
-                          secara pasif, dengan tingkat kemahiran menengah. Saya
-                          juga mampu membuat website responsif dari tahap
-                          perancangan hingga peluncuran (produksi), tidak hanya
-                          web, saya juga bisa menjadi Android developer. Selain
-                          itu, saya memiliki pengalaman dalam merakit robot
-                          berbasis Arduino menggunakan bahasa pemrograman C++,
-                          saya juga dapat bekerja secara tim menggunakan GitHub
-                          karena sebelumnya saya sudah pernah bekerja secara tim
-                          diperusahaan agency di kota
+                          I have English and Japanese language skills passively,
+                          with an intermediate level of proficiency. I am also
+                          able to create responsive websites from the design
+                          stage to launch (production), not only web, I can also
+                          be an Android developer. In addition, I have
+                          experience in assembling Arduino-based robots using
+                          the C++ programming language, I can also work in a
+                          team using GitHub because previously I had worked in a
+                          team in an agency company in the city
                         </p>
                         <p className="text-justify">
-                          Saat ini, minat saya tertuju pada pendalaman lebih
-                          lanjut dalam bidang web engineering, mencakup
-                          perancangan, pengembangan, hingga aspek keamanannya.
-                          Saya juga tertarik untuk mengembangkan karier di
-                          bidang keamanan siber (cyber security) di masa depan.
-                          Saya dikenal sebagai individu yang mudah beradaptasi
-                          dan memiliki semangat tinggi untuk mempelajari hal-hal
-                          baru.
+                          Currently, my interest is focused on further
+                          exploration in the field of web engineering, including
+                          design, development, and security aspects. I am also
+                          interested in developing a career in cybersecurity in
+                          the future. I am known as an adaptable individual and
+                          have a high spirit to learn new things.
                         </p>
                         {/* Add more content as needed */}
                       </ModalBody>
@@ -354,7 +352,7 @@ const ProfileCard: React.FC = () => {
                           color="danger"
                           variant="light"
                           onPress={onClose}>
-                          Kembali
+                          Back
                         </Button>
                       </ModalFooter>
                     </>
@@ -370,32 +368,32 @@ const ProfileCard: React.FC = () => {
                   {(onClose) => (
                     <>
                       <ModalHeader className="flex font-sans font-semibold flex-col gap-1 mt-16 text-white bg-black">
-                        Pengalaman Saya
+                        Work Exprience
                       </ModalHeader>
 
                       <ModalBody className="max-h-[500px] p-5 gap-y-4 overflow-y-auto">
                         <p className="text-justify">
-                          Saya telah terjun ke dunia pemrograman selama lebih
-                          dari 2 tahun, dengan fokus utama pada pengembangan web
-                          sejak tahun 2022, Sselain web, saya juga mempelajadi
-                          ui/ux design, android dev dan robotik.
+                          I have been in the programming world for more than 2
+                          years, with a primary focus on web development since
+                          2022. In addition to web, I also study ui/ux design,
+                          android dev and robotics.
                         </p>
                         <p className="text-justify">
-                          Selama perjalanan tersebut, saya memiliki pengalaman
-                          sebagai freelancer dengan membuat website berbagai
-                          website. Selain itu, saya juga pernah bekerja sebagai
-                          Frontend Developer di sebuah perusahaan agensi di Kota
-                          Medan selama 5 bulan. Sebelum itu, saya aktif
-                          mengikuti berbagai bootcamp dan pelatihan coding
-                          lainnya untuk terus mengasah keterampilan saya.
+                          During the journey, I have experience as a freelancer
+                          by creating websites for various websites. In
+                          addition, I have also worked as a Frontend Developer
+                          at an agency company in Medan City for 5 months.
+                          Before that, I actively participated in various
+                          bootcamps and other coding trainings to continue
+                          honing my skills.
                         </p>
                         <p className="text-justify">
-                          Hingga saat ini, saya telah menyelesaikan dan
-                          meluncurkan 4 website yang sudah diproduksi, saya juga
-                          ketua kelas sewaktu mahasiswa jabatan ini membuat saya
-                          terbiasa untuk peduli dan dewasa terhadap berbagai hal
-                          meski terkadang banyak dari anggota saya yang melukai
-                          perasaan saya.
+                          Until now, I have completed and launched 4 websites
+                          that have been produced, I was also the class
+                          president when I was a student, this position made me
+                          accustomed to caring and being mature about various
+                          things even though sometimes many of my members hurt
+                          my feelings.
                         </p>
                         {/* Add more content as needed */}
                       </ModalBody>
@@ -405,7 +403,7 @@ const ProfileCard: React.FC = () => {
                           color="danger"
                           variant="light"
                           onPress={onClose}>
-                          Kembali
+                          Back
                         </Button>
                       </ModalFooter>
                     </>
@@ -422,12 +420,12 @@ const ProfileCard: React.FC = () => {
                   {(onClose) => (
                     <>
                       <ModalHeader className="flex flex-col gap-1 mt-16 text-xl font-sans font-extrabold text-white bg-black">
-                        Keterampilan :
+                        Skills :
                       </ModalHeader>
 
                       <ModalBody className="max-h-[500px] p-5 gap-y-4 overflow-y-auto">
                         <p className="text-justify font-sans font-semibold">
-                          Keterampilan Teknis
+                          Technical Skills
                         </p>
                         {/* tabel 1 */}
                         <Table
@@ -435,7 +433,7 @@ const ProfileCard: React.FC = () => {
                           aria-label="Example static collection table">
                           <TableHeader>
                             <TableColumn className="font-sans font-bold">
-                              Bahasa Pemrograman
+                              Programming language
                             </TableColumn>
                             <TableColumn className="font-sans font-bold">
                               Framework
@@ -484,7 +482,6 @@ const ProfileCard: React.FC = () => {
                             </TableRow>
                             <TableRow key="6">
                               <TableCell className="text-center">
-                                {" "}
                                 Figma (ui/ux design)
                               </TableCell>
                               <TableCell className="text-center">
@@ -502,7 +499,7 @@ const ProfileCard: React.FC = () => {
                               Database
                             </TableColumn>
                             <TableColumn className="font-sans font-bold">
-                              Komponen
+                              Component
                             </TableColumn>
                           </TableHeader>
                           <TableBody>
@@ -523,7 +520,7 @@ const ProfileCard: React.FC = () => {
                           </TableBody>
                         </Table>
                         <p className="text-justify font-sans font-semibold">
-                          Keterampilan Non-Teknis
+                          Skills Non-Teknis
                         </p>
                         {/* tabel 1 */}
                         <Table
@@ -531,16 +528,16 @@ const ProfileCard: React.FC = () => {
                           aria-label="Example static collection table">
                           <TableHeader>
                             <TableColumn className="font-sans font-bold">
-                              Komunikasi
+                              Communication
                             </TableColumn>
                             <TableColumn className="font-sans font-bold">
-                              Kepemimpinan
+                              Leadership
                             </TableColumn>
                           </TableHeader>
                           <TableBody>
                             <TableRow key="1">
                               <TableCell className="text-center">
-                                Penjelasan Teknis
+                                Technical Explanation
                               </TableCell>
                               <TableCell className="text-center">
                                 Mentorship
@@ -548,10 +545,10 @@ const ProfileCard: React.FC = () => {
                             </TableRow>
                             <TableRow key="2">
                               <TableCell className="text-center">
-                                Kolaborasi Tim
+                                Team Collaboration
                               </TableCell>
                               <TableCell className="text-center">
-                                Pengambilan Keputusan
+                                Decision-making
                               </TableCell>
                             </TableRow>
                           </TableBody>
@@ -562,27 +559,27 @@ const ProfileCard: React.FC = () => {
                           aria-label="Example static collection table">
                           <TableHeader>
                             <TableColumn className="font-sans font-bold">
-                              Adaptabilitas
+                              Adaptability
                             </TableColumn>
                             <TableColumn className="font-sans font-bold">
-                              Empati dan Pengertian
+                              Empathy and Understanding
                             </TableColumn>
                           </TableHeader>
                           <TableBody>
                             <TableRow key="1">
                               <TableCell className="text-center">
-                                Fleksibilitas
+                                Flexibility
                               </TableCell>
                               <TableCell className="text-center">
-                                Pengertian Pelanggan
+                                Understanding Customers
                               </TableCell>
                             </TableRow>
                             <TableRow key="2">
                               <TableCell className="text-center">
-                                Pembelajaran Berkelanjutan
+                                Continuous Learning
                               </TableCell>
                               <TableCell className="text-center">
-                                Pengalaman Pengguna (UX)
+                                User Experience (UX)
                               </TableCell>
                             </TableRow>
                           </TableBody>
@@ -595,7 +592,7 @@ const ProfileCard: React.FC = () => {
                           color="danger"
                           variant="light"
                           onPress={onClose}>
-                          Kembali
+                          Back
                         </Button>
                       </ModalFooter>
                     </>
@@ -620,7 +617,7 @@ const ProfileCard: React.FC = () => {
         <div className="relative flex flex-col items-center text-white  rounded-lg shadow-lg w-80 mx-auto">
           <div className="text-center mb-4">
             <h1 className="text-3xl mb-2 font-bold font-sans text-white">
-              Sertifikat
+              Certificate
             </h1>
           </div>
 
@@ -829,7 +826,7 @@ const ProfileCard: React.FC = () => {
               <SwiperSlide className="px-14 py-14 bg-primary rounded-lg">
                 <div className=" flex flex-col items-center">
                   <h2 className="text-xl font-sans text-center font-semibold mb-6 text-white">
-                    Figma Portfolio Saya
+                    Figma My Portfolio
                   </h2>
                   <Swiper
                     modules={[Navigation, Pagination]} // Tambahkan modul navigasi dan pagination
@@ -866,7 +863,7 @@ const ProfileCard: React.FC = () => {
               <SwiperSlide className="px-14 py-14 bg-primary rounded-lg">
                 <div className=" flex flex-col items-center">
                   <h2 className="text-xl font-sans text-center font-semibold mb-6 text-white">
-                    Project Lainya
+                    Other Projects
                   </h2>
                   <Swiper
                     modules={[Navigation, Pagination]} // Tambahkan modul navigasi dan pagination
@@ -876,7 +873,7 @@ const ProfileCard: React.FC = () => {
                     pagination={{ clickable: true, el: ".custom-pagination1" }} // Pagination untuk nested swiper
                     className="w-full text-sm text-center">
                     <div className="custom-pagination1 mt-20 gap-2 flex items-center justify-center"></div>
-                    Dapat ditemukan pada Versi 0.1
+                    Can be found in Version 0.1
                   </Swiper>
 
                   <Link
@@ -903,13 +900,14 @@ const ProfileCard: React.FC = () => {
         <div className="flex flex-col ">
           <div className="flex items-center justify-center mb-5">
             <h1 className="text-3xl  font-sans text-white dark:text-second top-24 font-bold ">
-              Unduh Cv
+              Download Cv
             </h1>
           </div>
+
           <div>
             <a
               className="flex items-center cursor-pointer justify-center"
-              href="/cv DANDI AGUS WIJAYA- indonesia.pdf">
+              href="/cvku ENGLISH.pdf">
               <img
                 src={downloadcv.src}
                 alt="gif"

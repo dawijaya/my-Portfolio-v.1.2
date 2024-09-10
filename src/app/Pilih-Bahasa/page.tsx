@@ -1,7 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import bg from "@/app/assets/2.jpg";
-import { FaInstagram } from "react-icons/fa6";
+import { FaInstagram, FaSquareGithub } from "react-icons/fa6";
 import { SiGmail } from "react-icons/si";
 import { FaWhatsappSquare } from "react-icons/fa";
 import { Link } from "@nextui-org/link";
@@ -70,9 +70,16 @@ const LanguageSelection: React.FC = () => {
             className="cursor-pointer">
             <FaWhatsappSquare size="2rem" />
           </a>
+          <a
+            href="https://github.com/dawijaya"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cursor-pointer">
+            <FaSquareGithub size="2rem" />
+          </a>
         </div>
-        <p className="font-semibold">Copyright©DandiAgusWijaya2024</p>
-        <p>Versi 1.2</p>
+        <p className="font-sans text-xs font-semibold">Versi 1.2</p>
+        <p className="font-semibold">Copyright © Dandi Agus Wijaya 2024</p>
         <p className="text-xs font-sans font-medium">
           untuk versi dekstop masih dalam tahap pengembangan
         </p>

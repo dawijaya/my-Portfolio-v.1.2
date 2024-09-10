@@ -34,3 +34,11 @@ body {
     text-wrap: balance;
   }
 }
+
+.custom-pagination {
+  margin-bottom: 10px; /* Mengatur margin top */
+}
+.custom-pagination1 {
+  margin-bottom: 0px; /* Mengatur margin top */
+  margin-top: 20px;
+}

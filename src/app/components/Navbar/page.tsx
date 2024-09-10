@@ -15,14 +15,14 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 const drawerWidth = 240;
 const navItems = [
-  { label: "Halaman Utama", id: "home" },
-  { label: "Tentang Saya", id: "tentang-saya" },
-  { label: "Sertifikasi", id: "sertifikasi" },
+  { label: "Home", id: "home" },
+  { label: "About Me", id: "tentang-saya" },
+  { label: "Certificate", id: "sertifikat" },
   { label: "Portfolio", id: "portfolio" },
-  { label: "Kontak", id: "kontak" },
   { label: "CV", id: "cv" },
 ];
 
@@ -83,7 +83,22 @@ const Navbar: React.FC = () => {
             </ListItemButton>
           </ListItem>
         ))}
-        <div className="absolute top-[30rem] left-4">
+
+        {/* Wrapper for the buttons */}
+        <div className="absolute top-[17rem] left-0 right-0 flex justify-center gap-4 overflow-hidden">
+          <Link href="https://dawijaya.github.io/Mycv/">
+            <button className="bg-primary  p-2 rounded-lg">
+              <p className="text-xs text-white font-sans">Versi 0.1</p>
+            </button>
+          </Link>
+          <Link href="https://dawijaya.github.io/portfolio-pakai-Tailwind-CSS/">
+            <button className="bg-primary p-2 rounded-lg">
+              <p className="text-xs font-sans text-white">Versi 0.2</p>
+            </button>
+          </Link>
+        </div>
+
+        <div className="absolute top-[20rem] left-4 overflow-hidden">
           <p className="font-semibold text-xs">
             Copyright©<span className="text-primary">DandiAgusWijaya</span>2024
           </p>
