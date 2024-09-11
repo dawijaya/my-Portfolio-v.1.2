@@ -625,25 +625,27 @@ const ProfileCard: React.FC = () => {
             </h1>
           </div>
 
-          <div className="w-full max-w-2xl bg-primary  shadow-lg rounded-lg">
+          <div className="w-full max-w-2xl bg-primary shadow-lg rounded-lg">
             <Swiper
               modules={[Navigation, Pagination]}
-              spaceBetween={0}
+              spaceBetween={10} // Beri sedikit ruang antar slide
               slidesPerView={1}
               navigation
               pagination={{
                 clickable: true,
                 el: ".custom-pagination", // Menggunakan custom class
               }}
-              className="w-full" // Mengatur posisi relatif
+              className="w-full relative" // Mengatur posisi relatif
             >
               {imageSlides.map((slide, index) => (
-                <SwiperSlide className="w-full p-5" key={index}>
+                <SwiperSlide
+                  className="flex justify-center items-center w-full p-5"
+                  key={index}>
                   <div className="flex flex-col items-center w-full">
                     <img
                       src={slide.src}
                       alt={slide.alt}
-                      className="w-full h-64 object-contain rounded-lg"
+                      className="w-full max-w-xs h-64 object-contain rounded-lg" // Batasan lebar dan tinggi maksimum
                     />
                     <p className="mt-4 text-white text-center text-sm px-4">
                       {slide.description}
@@ -652,7 +654,8 @@ const ProfileCard: React.FC = () => {
                 </SwiperSlide>
               ))}
             </Swiper>
-            <div className="custom-pagination flex items-center justify-center"></div>
+            <div className="custom-pagination flex items-center justify-center mt-4"></div>{" "}
+            {/* Tambahkan margin-top untuk memberi jarak */}
           </div>
         </div>
       </section>
