@@ -1,7 +1,9 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import bg from "@/app/assets/1.jpg";
-import picture from "@/app/assets/bg-home.png";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 import TentangSaya from "@/app/assets/3.jpg";
 import Tentanggif from "@/app/assets/bg tentang saya.gif";
 import GulirKebawah from "@/app/assets/gif-kebawah.gif";
@@ -128,6 +130,15 @@ const imageSlides = [
     description: "Education Fair to Study in South Korea 07/09/2023",
   },
 ];
+
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+};
+
 const imageSlides1 = [
   {
     src: lopec1.src,
@@ -626,35 +637,21 @@ const ProfileCard: React.FC = () => {
           </div>
 
           <div className="w-full max-w-2xl bg-primary shadow-lg rounded-lg">
-            <Swiper
-              modules={[Navigation, Pagination]}
-              spaceBetween={10} // Beri sedikit ruang antar slide
-              slidesPerView={1}
-              navigation
-              pagination={{
-                clickable: true,
-                el: ".custom-pagination", // Menggunakan custom class
-              }}
-              className="w-full relative" // Mengatur posisi relatif
-            >
+            <Slider {...settings}>
               {imageSlides.map((slide, index) => (
-                <SwiperSlide
-                  className="flex justify-center items-center w-full p-5"
-                  key={index}>
-                  <div className="flex flex-col items-center w-full">
-                    <img
-                      src={slide.src}
-                      alt={slide.alt}
-                      className="w-full max-w-xs h-64 object-contain rounded-lg" // Batasan lebar dan tinggi maksimum
-                    />
-                    <p className="mt-4 text-white text-center text-sm px-4">
-                      {slide.description}
-                    </p>
-                  </div>
-                </SwiperSlide>
+                <div key={index}>
+                  <img
+                    src={slide.src}
+                    alt={slide.alt}
+                    className="w-full h-64 object-contain rounded-lg"
+                  />
+                  <p className="text-center text-white mt-4">
+                    {slide.description}
+                  </p>
+                </div>
               ))}
-            </Swiper>
-            <div className="custom-pagination flex items-center justify-center mt-4"></div>{" "}
+            </Slider>
+            {/* <div className="custom-pagination flex items-center justify-center mt-4"></div>{" "} */}
             {/* Tambahkan margin-top untuk memberi jarak */}
           </div>
         </div>
