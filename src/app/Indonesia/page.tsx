@@ -8,6 +8,7 @@ import GulirKebawah from "@/app/assets/gif-kebawah.gif";
 import picture2 from "@/app/assets/2.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import mybg from "@/app/assets/IMG_0416.png";
 import "swiper/css/navigation";
 import { FaSquareGithub } from "react-icons/fa6";
 import "swiper/css/pagination";
@@ -235,9 +236,9 @@ const ProfileCard: React.FC = () => {
           </div>
           <div className="mb-4">
             <img
-              src={picture.src}
+              src={mybg.src}
               alt="Dandi Agus Wijaya"
-              className="w-36 h-36 rounded-full object-cover border-4 border-white"
+              className="w-36 h-36 rounded-full object-center border-4 border-white"
             />
           </div>
           <p className="text-center font-sans font-semibold mt-4 text-lg">
@@ -627,23 +628,24 @@ const ProfileCard: React.FC = () => {
           <div className="w-full max-w-2xl bg-primary  shadow-lg rounded-lg">
             <Swiper
               modules={[Navigation, Pagination]}
-              spaceBetween={50}
+              spaceBetween={0}
               slidesPerView={1}
               navigation
               pagination={{
                 clickable: true,
                 el: ".custom-pagination", // Menggunakan custom class
               }}
-              className="relative" // Mengatur posisi relatif
+              className="w-full" // Mengatur posisi relatif
             >
               {imageSlides.map((slide, index) => (
-                <SwiperSlide className="p-5  " key={index}>
+                <SwiperSlide className="p-5 w-full  " key={index}>
                   <div className="flex flex-col items-center">
                     <img
                       src={slide.src}
                       alt={slide.alt}
                       className="w-full h-64 object-fill rounded-lg"
                     />
+
                     <p className="mt-6 text-white text-center text-lg font-semibold">
                       {slide.description}
                     </p>
