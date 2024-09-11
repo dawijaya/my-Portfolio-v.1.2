@@ -638,15 +638,14 @@ const ProfileCard: React.FC = () => {
               className="w-full" // Mengatur posisi relatif
             >
               {imageSlides.map((slide, index) => (
-                <SwiperSlide className="p-5 w-full  " key={index}>
-                  <div className="flex flex-col items-center">
+                <SwiperSlide className="w-full p-5" key={index}>
+                  <div className="flex flex-col items-center w-full">
                     <img
                       src={slide.src}
                       alt={slide.alt}
-                      className="w-full h-64 object-fill rounded-lg"
+                      className="w-full h-64 object-contain rounded-lg"
                     />
-
-                    <p className="mt-6 text-white text-center text-lg font-semibold">
+                    <p className="mt-4 text-white text-center text-sm px-4">
                       {slide.description}
                     </p>
                   </div>
