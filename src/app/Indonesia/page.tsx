@@ -25,7 +25,6 @@ import {
   TableBody,
   TableRow,
   TableCell,
-  Link,
 } from "@nextui-org/react";
 import bgcv from "@/app/assets/background-6824_512.gif";
 import sertif1 from "@/app/assets/sertif1.png";
