@@ -35,10 +35,24 @@ body {
   }
 }
 
-.custom-pagination {
-  margin-bottom: 10px; /* Mengatur margin top */
+.slick-dots li button:before {
+  color: red !important; /* Ubah warna pagination dots dengan !important */
+  font-size: 17px; /* Ubah ukuran jika perlu */
 }
-.custom-pagination1 {
-  margin-bottom: 0px; /* Mengatur margin top */
-  margin-top: 20px;
+
+.slick-dots li.slick-active button:before {
+  color: white !important;
+  font-size: 15px; /* Ubah warna dots yang aktif dengan !important */
+}
+
+/* Mengubah warna default dari pagination dots */
+.react-multi-carousel-dot button {
+  background-color: #fff; /* Warna dot default */
+  opacity: 0.5; /* Transparansi dot */
+}
+
+/* Mengubah warna pagination dot yang aktif */
+.react-multi-carousel-dot--active button {
+  background-color: #00ff00; /* Warna dot yang aktif */
+  opacity: 1;
 }

@@ -4,18 +4,20 @@ import bg from "@/app/assets/1.jpg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import bghome from "@/app/assets/IMG_20220310_144726_622.jpg";
 import TentangSaya from "@/app/assets/3.jpg";
 import Tentanggif from "@/app/assets/bg tentang saya.gif";
 import GulirKebawah from "@/app/assets/gif-kebawah.gif";
 import picture2 from "@/app/assets/2.jpg";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
+
 import mybg from "@/app/assets/IMG_0416.png";
-import "swiper/css/navigation";
+
 import { FaSquareGithub } from "react-icons/fa6";
-import "swiper/css/pagination";
+
 import downloadcv from "@/app/assets/download-2486_256.gif";
-import { Navigation, Pagination } from "swiper/modules";
+
 import {
   Table,
   TableHeader,
@@ -82,6 +84,33 @@ const RotatingText: React.FC = () => {
   );
 };
 
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+};
+
+const responsive = {
+  superLargeDesktop: {
+    breakpoint: { max: 4000, min: 1024 },
+    items: 1,
+  },
+  desktop: {
+    breakpoint: { max: 1024, min: 768 },
+    items: 1,
+  },
+  tablet: {
+    breakpoint: { max: 768, min: 464 },
+    items: 1,
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1,
+  },
+};
+
 // Array gambar yang diimpor dan deskripsinya
 const imageSlides = [
   {
@@ -130,14 +159,6 @@ const imageSlides = [
     description: "Education Fair to Study in South Korea 07/09/2023",
   },
 ];
-
-const settings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-};
 
 const imageSlides1 = [
   {
@@ -202,6 +223,13 @@ const imageSlides5 = [
       "Ini adalah Ui/Ux Design Web ini yang saya rancang agar seminimalis mungkin dan hanya 4 pemilihan Warna yang soft",
   },
 ];
+const imageSlides6 = [
+  {
+    src: bghome.src,
+    alt: "project Lainnya",
+    description: "Dapat ditemukan di Versi 0.1",
+  },
+];
 
 const ProfileCard: React.FC = () => {
   const {
@@ -249,7 +277,7 @@ const ProfileCard: React.FC = () => {
             <img
               src={mybg.src}
               alt="Dandi Agus Wijaya"
-              className="w-36 h-36 rounded-full object-center border-4 border-white"
+              className="w-44 h-44 rounded-full object-cover border-4 border-white"
             />
           </div>
           <p className="text-center font-sans font-semibold mt-4 text-lg">
@@ -637,7 +665,7 @@ const ProfileCard: React.FC = () => {
           </div>
 
           <div className="w-full max-w-2xl bg-primary shadow-lg rounded-lg">
-            <Slider {...settings}>
+            <Slider className="p-5" {...settings}>
               {imageSlides.map((slide, index) => (
                 <div key={index}>
                   <img
@@ -651,8 +679,6 @@ const ProfileCard: React.FC = () => {
                 </div>
               ))}
             </Slider>
-            {/* <div className="custom-pagination flex items-center justify-center mt-4"></div>{" "} */}
-            {/* Tambahkan margin-top untuk memberi jarak */}
           </div>
         </div>
       </section>
@@ -670,224 +696,216 @@ const ProfileCard: React.FC = () => {
             </h1>
           </div>
 
-          <div className="w-full  shadow-lg rounded-lg">
-            <Swiper
-              modules={[Navigation, Pagination]}
-              spaceBetween={50}
-              slidesPerView={1}
-              navigation
-              pagination={{ clickable: true }}
-              className="relative">
-              {/* Slide Pertama - Nested Swiper dengan Gambar yang Bisa Di-slide */}
-              <SwiperSlide className="px-14 py-14 bg-primary rounded-lg">
-                <div className=" flex flex-col items-center">
+          <div className="w-full shadow-lg rounded-lg">
+            <Carousel
+              responsive={responsive}
+              showDots={true}
+              arrows={true}
+              infinite={true}
+              containerClass="relative">
+              {/* Slide Pertama */}
+              <div className="px-14 py-14 bg-primary rounded-lg">
+                <div className="flex flex-col items-center">
                   <h2 className="text-xl font-sans text-center font-semibold mb-6 text-white">
                     Back Office Lopectech
                   </h2>
-                  <Swiper
-                    modules={[Navigation, Pagination]} // Tambahkan modul navigasi dan pagination
-                    spaceBetween={10}
-                    slidesPerView={1}
-                    navigation
-                    pagination={{ clickable: true, el: ".custom-pagination1" }} // Pagination untuk nested swiper
-                    className="w-full">
-                    <div className="custom-pagination1 mt-20 gap-2 flex items-center justify-center"></div>
+                  <Carousel
+                    responsive={responsive}
+                    showDots={true}
+                    arrows={true}
+                    infinite={true}
+                    containerClass="w-full">
                     {imageSlides1.map((slide, index) => (
-                      <SwiperSlide
-                        key={index}
-                        className="flex flex-col items-center">
+                      <div key={index} className="flex flex-col items-center">
                         <img
                           src={slide.src}
                           alt={slide.alt}
-                          className="w-full h-64 object-fill rounded-lg"
+                          className="w-full h-64 object-contain rounded-lg"
                         />
-                        <p className="mt-6 text-center text-sm font-semibold text-white">
+                        <p className="mt-3 mb-8 text-center text-sm font-semibold text-white">
                           {slide.description}
                         </p>
-                      </SwiperSlide>
+                      </div>
                     ))}
-                  </Swiper>
+                  </Carousel>
 
-                  <Link
+                  <a
                     href="https://dev-admin.lopectech.com/"
                     className="bg-skyblue text-black text-center font-sans font-semibold cursor-pointer hover:text-green-700 w-1/2 mt-4 rounded-lg">
                     <button>Link</button>
-                  </Link>
+                  </a>
                 </div>
-              </SwiperSlide>
-              {/* Slide Kedua - Bagian Lain */}
-              <SwiperSlide className="px-14 py-14 bg-primary rounded-lg">
-                <div className=" flex flex-col items-center">
+              </div>
+
+              {/* Slide Kedua */}
+              <div className="px-14 py-14 bg-primary rounded-lg">
+                <div className="flex flex-col items-center">
                   <h2 className="text-xl font-sans text-center font-semibold mb-6 text-white">
                     Win 81 Automotive
                   </h2>
-                  <Swiper
-                    modules={[Navigation, Pagination]} // Tambahkan modul navigasi dan pagination
-                    spaceBetween={10}
-                    slidesPerView={1}
-                    navigation
-                    pagination={{ clickable: true, el: ".custom-pagination1" }} // Pagination untuk nested swiper
-                    className="w-full">
-                    <div className="custom-pagination1 mt-20 gap-2 flex items-center justify-center"></div>
+                  <Carousel
+                    responsive={responsive}
+                    showDots={true}
+                    arrows={true}
+                    infinite={true}
+                    containerClass="w-full">
                     {imageSlides2.map((slide, index) => (
-                      <SwiperSlide
-                        key={index}
-                        className="flex flex-col items-center">
+                      <div key={index} className="flex flex-col items-center">
                         <img
                           src={slide.src}
                           alt={slide.alt}
-                          className="w-full h-64 object-fill rounded-lg"
+                          className="w-full h-64 object-contain rounded-lg"
                         />
-                        <p className="mt-6 text-center text-sm font-semibold text-white">
+                        <p className="mt-3 mb-6 text-center text-sm font-semibold text-white">
                           {slide.description}
                         </p>
-                      </SwiperSlide>
+                      </div>
                     ))}
-                  </Swiper>
+                  </Carousel>
 
-                  <Link
+                  <a
                     href="https://winautomotive.id/"
                     className="bg-skyblue text-black text-center font-sans font-semibold cursor-pointer hover:text-green-700 w-1/2 mt-4 rounded-lg">
                     <button>Link</button>
-                  </Link>
+                  </a>
                 </div>
-              </SwiperSlide>
-              {/* Slide Ketiga - Tambahan Konten */}
-              <SwiperSlide className="px-14 py-14 bg-primary rounded-lg">
-                <div className=" flex flex-col items-center">
+              </div>
+
+              {/* Slide Ketiga */}
+              <div className="px-14 py-14 bg-primary rounded-lg">
+                <div className="flex flex-col items-center">
                   <h2 className="text-xl font-sans text-center font-semibold mb-6 text-white">
                     MotorCheckUp
                   </h2>
-                  <Swiper
-                    modules={[Navigation, Pagination]} // Tambahkan modul navigasi dan pagination
-                    spaceBetween={10}
-                    slidesPerView={1}
-                    navigation
-                    pagination={{ clickable: true, el: ".custom-pagination1" }} // Pagination untuk nested swiper
-                    className="w-full">
-                    <div className="custom-pagination1 mt-20 gap-2 flex items-center justify-center"></div>
+                  <Carousel
+                    responsive={responsive}
+                    showDots={true}
+                    arrows={true}
+                    infinite={true}
+                    containerClass="w-full">
                     {imageSlides3.map((slide, index) => (
-                      <SwiperSlide
-                        key={index}
-                        className="flex flex-col items-center">
+                      <div key={index} className="flex flex-col items-center">
                         <img
                           src={slide.src}
                           alt={slide.alt}
-                          className="w-full h-64 object-fill rounded-lg"
+                          className="w-full h-64 object-contain rounded-lg"
                         />
-                        <p className="mt-6 text-center text-sm font-semibold text-white">
+                        <p className="mt-3 mb-8 text-center text-sm font-semibold text-white">
                           {slide.description}
                         </p>
-                      </SwiperSlide>
+                      </div>
                     ))}
-                  </Swiper>
+                  </Carousel>
 
-                  <Link
+                  <a
                     href="https://motorcheckup.sg/"
                     className="bg-skyblue text-black text-center font-sans font-semibold cursor-pointer hover:text-green-700 w-1/2 mt-4 rounded-lg">
                     <button>Link</button>
-                  </Link>
+                  </a>
                 </div>
-              </SwiperSlide>
-              {/* Slide Keeempat - Tambahan Konten */}
-              <SwiperSlide className="px-14 py-14 bg-primary rounded-lg">
-                <div className=" flex flex-col items-center">
+              </div>
+
+              {/* Slide Keempat */}
+              <div className="px-14 py-14 bg-primary rounded-lg">
+                <div className="flex flex-col items-center">
                   <h2 className="text-xl font-sans text-center font-semibold mb-6 text-white">
                     Isun Education
                   </h2>
-                  <Swiper
-                    modules={[Navigation, Pagination]} // Tambahkan modul navigasi dan pagination
-                    spaceBetween={10}
-                    slidesPerView={1}
-                    navigation
-                    pagination={{ clickable: true, el: ".custom-pagination1" }} // Pagination untuk nested swiper
-                    className="w-full">
-                    <div className="custom-pagination1 mt-20 gap-2 flex items-center justify-center"></div>
+                  <Carousel
+                    responsive={responsive}
+                    showDots={true}
+                    arrows={true}
+                    infinite={true}
+                    containerClass="w-full">
                     {imageSlides4.map((slide, index) => (
-                      <SwiperSlide
-                        key={index}
-                        className="flex flex-col items-center">
+                      <div key={index} className="flex flex-col items-center">
                         <img
                           src={slide.src}
                           alt={slide.alt}
-                          className="w-full h-64 object-fill rounded-lg"
+                          className="w-full h-64 object-contain rounded-lg"
                         />
-                        <p className="mt-6 text-center text-sm font-semibold text-white">
+                        <p className="mt-3 mb-7 text-center text-sm font-semibold text-white">
                           {slide.description}
                         </p>
-                      </SwiperSlide>
+                      </div>
                     ))}
-                  </Swiper>
+                  </Carousel>
 
-                  <Link
+                  <a
                     href="https://isunworld.com/"
                     className="bg-skyblue text-black text-center font-sans font-semibold cursor-pointer hover:text-green-700 w-1/2 mt-4 rounded-lg">
                     <button>Link</button>
-                  </Link>
+                  </a>
                 </div>
-              </SwiperSlide>
-              {/* Slide Kelima - Tambahan Konten */}
-              <SwiperSlide className="px-14 py-14 bg-primary rounded-lg">
-                <div className=" flex flex-col items-center">
+              </div>
+
+              {/* Slide Kelima */}
+              <div className="px-14 py-14 bg-primary rounded-lg">
+                <div className="flex flex-col items-center">
                   <h2 className="text-xl font-sans text-center font-semibold mb-6 text-white">
                     Figma Portfolio Saya
                   </h2>
-                  <Swiper
-                    modules={[Navigation, Pagination]} // Tambahkan modul navigasi dan pagination
-                    spaceBetween={10}
-                    slidesPerView={1}
-                    navigation
-                    pagination={{ clickable: true, el: ".custom-pagination1" }} // Pagination untuk nested swiper
-                    className="w-full">
-                    <div className="custom-pagination1 mt-20 gap-2 flex items-center justify-center"></div>
+                  <Carousel
+                    responsive={responsive}
+                    showDots={true}
+                    arrows={true}
+                    infinite={true}
+                    containerClass="w-full">
                     {imageSlides5.map((slide, index) => (
-                      <SwiperSlide
-                        key={index}
-                        className="flex flex-col items-center">
+                      <div key={index} className="flex flex-col items-center">
                         <img
                           src={slide.src}
                           alt={slide.alt}
-                          className="w-full h-64 object-fill rounded-lg"
+                          className="w-full h-64 object-contain rounded-lg"
                         />
-                        <p className="mt-6 text-center text-sm font-semibold text-white">
+                        <p className="mt-3 mb-7  text-justify text-sm font-semibold text-white">
                           {slide.description}
                         </p>
-                      </SwiperSlide>
+                      </div>
                     ))}
-                  </Swiper>
+                  </Carousel>
 
-                  <Link
+                  <a
                     href="https://www.figma.com/design/hxF8qhAWdUsXgoxeHhQQFF/ui%2Fux-my-portfolio?node-id=0-1&node-type=CANVAS&t=ZnNjdTMGQs9TnS6o-0"
                     className="bg-skyblue text-black text-center font-sans font-semibold cursor-pointer hover:text-green-700 w-1/2 mt-4 rounded-lg">
                     <button>Link</button>
-                  </Link>
+                  </a>
                 </div>
-              </SwiperSlide>
-              {/* Slide Keenam - Tambahan Konten */}
-              <SwiperSlide className="px-14 py-14 bg-primary rounded-lg">
-                <div className=" flex flex-col items-center">
+              </div>
+              {/* Keenam */}
+              <div className="px-14 py-14 bg-primary rounded-lg">
+                <div className="flex flex-col items-center">
                   <h2 className="text-xl font-sans text-center font-semibold mb-6 text-white">
-                    Project Lainya
+                    Project Lainnya
                   </h2>
-                  <Swiper
-                    modules={[Navigation, Pagination]} // Tambahkan modul navigasi dan pagination
-                    spaceBetween={10}
-                    slidesPerView={1}
-                    navigation
-                    pagination={{ clickable: true, el: ".custom-pagination1" }} // Pagination untuk nested swiper
-                    className="w-full text-sm text-center">
-                    <div className="custom-pagination1 mt-20 gap-2 flex items-center justify-center"></div>
-                    Dapat ditemukan pada Versi 0.1
-                  </Swiper>
+                  <Carousel
+                    responsive={responsive}
+                    showDots={true}
+                    arrows={true}
+                    infinite={true}
+                    containerClass="w-full">
+                    {imageSlides6.map((slide, index) => (
+                      <div key={index} className="flex flex-col items-center">
+                        <img
+                          src={slide.src}
+                          alt={slide.alt}
+                          className="w-full h-64 object-contain rounded-lg"
+                        />
+                        <p className="mt-3 mb-6 text-center text-sm font-semibold text-white">
+                          {slide.description}
+                        </p>
+                      </div>
+                    ))}
+                  </Carousel>
 
-                  <Link
+                  <a
                     href="https://dawijaya.github.io/Mycv/"
                     className="bg-skyblue text-black text-center font-sans font-semibold cursor-pointer hover:text-green-700 w-1/2 mt-4 rounded-lg">
                     <button>Link</button>
-                  </Link>
+                  </a>
                 </div>
-              </SwiperSlide>
-            </Swiper>
+              </div>
+            </Carousel>
           </div>
         </div>
       </section>
