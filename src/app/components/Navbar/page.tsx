@@ -98,7 +98,7 @@ const Navbar: React.FC = () => {
           </Link>
         </div>
 
-        <div className="absolute top-[20rem] left-4 overflow-hidden">
+        <div className="absolute top-[20rem] left-5 overflow-hidden">
           <p className="font-semibold text-xs">
             Copyright©<span className="text-primary">DandiAgusWijaya</span>2024
           </p>
@@ -126,7 +126,7 @@ const Navbar: React.FC = () => {
             variant="h6"
             component="div"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}>
-            Menu
+            DANDI AGUS WIJAYA
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (

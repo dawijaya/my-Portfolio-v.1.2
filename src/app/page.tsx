@@ -113,21 +113,15 @@ export default function Home() {
   };
 
   return (
-    <main
-      className="container min-h-screen overflow-hidden"
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-between",
-      }}>
+    <main className="container min-h-screen h-full w-screen lg:overflow-x-visible overflow-x-hidden">
       <Stack
-        className="fixed"
+        className="fixed md:text-xl mt-14 max-w-full"
         sx={{
           width: "100%",
           zIndex: (theme) => theme.zIndex.drawer + 2, // Set zIndex higher than Backdrop
         }}
         spacing={10}>
-        {alert}
+        <div className="flex justify-center w-full">{alert}</div>
       </Stack>
 
       <Backdrop
@@ -138,24 +132,28 @@ export default function Home() {
       </Backdrop>
 
       <section
-        className="flex flex-col items-center justify-center flex-grow p-8"
+        className="flex flex-col items-center w-screen justify-center flex-grow p-8 min-h-screen lg:overflow-x-visible overflow-x-hidden"
         style={{
           backgroundImage: `url(${bg.src})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
+          backgroundAttachment: "fixed", // Menambah agar gambar tetap menempel di layar
         }}>
         <div className="mb-4 flex justify-center">
-          <img src={gif.src} alt="Animated HUD GIF" className="w-1/2 h-1/2" />
+          <img
+            src={gif.src}
+            alt="Animated HUD GIF"
+            className="w-1/2 h-1/2 md:w-1/3 md:h-1/3"
+          />
         </div>
 
-        <form onSubmit={handleSubmit} className="w-full max-w-sm">
-          {" "}
-          <section className="bg-black bg-opacity-80 rounded-xl p-6 sm:p-10">
-            <h1 className="text-white text-center font-bold text-2xl font-sans">
+        <form onSubmit={handleSubmit} className=" ">
+          <section className="bg-black bg-opacity-80 rounded-xl p-6 sm:p-10 md:w-[44rem] bg-center">
+            <h1 className="text-white text-center font-bold text-2xl md:text-4xl font-sans">
               Selamat Datang
             </h1>
-            <h2 className="text-white text-center text-xl mb-6 font-sans font-semibold">
+            <h2 className="text-white text-center text-xl  md:text-3xl mb-6 font-sans font-light">
               Welcome
             </h2>
             <div className="">
@@ -340,45 +338,39 @@ export default function Home() {
           </section>
         </form>
       </section>
-      <footer className="w-full bg-gray-300 text-black p-4 text-center">
+      <footer className="w-screen bg-gray-300 text-black p-4 text-center">
         <div className="flex justify-center space-x-4 mb-2">
           <a
             href="https://www.instagram.com/d_a_wijayaa/"
             target="_blank"
             rel="noopener noreferrer"
-            className="cursor-pointer">
+            className="cursor-pointer hover:text-orange-400">
             <FaInstagram size="2rem" />
           </a>
           <a
             href="mailto:geryybangsawan@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="cursor-pointer">
+            className="cursor-pointer hover:text-red-500">
             <SiGmail size="2rem" />
           </a>
           <a
             href="https://wa.me/6285175232251"
             target="_blank"
             rel="noopener noreferrer"
-            className="cursor-pointer">
+            className="cursor-pointer hover:text-green-500">
             <FaWhatsappSquare size="2rem" />
           </a>
           <a
             href="https://github.com/dawijaya"
             target="_blank"
             rel="noopener noreferrer"
-            className="cursor-pointer">
+            className="cursor-pointer hover:text-primary">
             <FaSquareGithub size="2rem" />
           </a>
         </div>
         <p className="font-sans text-xs font-semibold">Versi 1.2</p>
         <p className="font-semibold">Copyright © Dandi Agus Wijaya 2024</p>
-        <p className="text-xs font-sans font-medium">
-          untuk versi dekstop masih dalam tahap pengembangan
-        </p>
-        <p className="text-xs font-sans text-blue-950 font-bold">
-          for the desktop version is still under development
-        </p>
       </footer>
     </main>
   );

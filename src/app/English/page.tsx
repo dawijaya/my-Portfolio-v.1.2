@@ -932,45 +932,39 @@ const ProfileCard: React.FC = () => {
           </div>
         </div>
       </section>
-      <footer className="w-full bg-gray-300 text-black p-4 text-center">
+      <footer className="w-screen bg-gray-300 text-black p-4 text-center">
         <div className="flex justify-center space-x-4 mb-2">
           <a
             href="https://www.instagram.com/d_a_wijayaa/"
             target="_blank"
             rel="noopener noreferrer"
-            className="cursor-pointer">
+            className="cursor-pointer hover:text-orange-400">
             <FaInstagram size="2rem" />
           </a>
           <a
             href="mailto:geryybangsawan@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="cursor-pointer">
+            className="cursor-pointer hover:text-red-500">
             <SiGmail size="2rem" />
           </a>
           <a
             href="https://wa.me/6285175232251"
             target="_blank"
             rel="noopener noreferrer"
-            className="cursor-pointer">
+            className="cursor-pointer hover:text-green-500">
             <FaWhatsappSquare size="2rem" />
           </a>
           <a
             href="https://github.com/dawijaya"
             target="_blank"
             rel="noopener noreferrer"
-            className="cursor-pointer">
+            className="cursor-pointer hover:text-primary">
             <FaSquareGithub size="2rem" />
           </a>
         </div>
         <p className="font-sans text-xs font-semibold">Versi 1.2</p>
         <p className="font-semibold">Copyright © Dandi Agus Wijaya 2024</p>
-        <p className="text-xs font-sans font-medium">
-          untuk versi dekstop masih dalam tahap pengembangan
-        </p>
-        <p className="text-xs font-sans text-blue-950 font-bold">
-          for the desktop version is still under development
-        </p>
       </footer>
     </>
   );
